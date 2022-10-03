@@ -1,0 +1,15 @@
+import itertools
+import random
+
+
+def get_shuffled_cards(cards, suits):
+    shuf_cards = list(itertools.product(cards, suits))
+    shuffled_cards = random.sample(shuf_cards, len(shuf_cards))
+    print(shuf_cards)
+    print(len(shuf_cards))
+    print(shuffled_cards)
+    return shuffled_cards
+
+
+get_shuffled_cards(['2', '3', '4', '5', '6', '7', '8', '9', '10',
+                   'J', 'Q', 'K', 'A'], ["diamonds", "hearts", "spades", "clubs"])
